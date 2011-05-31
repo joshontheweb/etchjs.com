@@ -1,23 +1,52 @@
 // vars
 @fontSize: 16px;
+@fontColor: #555;
+@headingColor: #000;
+@red: rgb(175, 75, 60);
 @lineHeight: 1.5;
 
 // mixins
 .box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) { @val: @x @y @blur rgba(0, 0, 0, @alpha); box-shadow: @val; -webkit-box-shadow: @val; -moz-box-shadow: @val; }
 .border-radius (@radius) { -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius; }
 .clear { overflow: hidden; *zoom: 1; }
+.gradient (@from, @to) {
+    background-color: @from;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, @from, @to); /* Chrome 10+, Saf5.1+ */
+    background-image:    -moz-linear-gradient(top, @from, @to); /* FF3.6 */
+    background-image:     -ms-linear-gradient(top, @from, @to); /* IE10 */
+    background-image:      -o-linear-gradient(top, @from, @to); /* Opera 11.10+ */
+    background-image:         linear-gradient(top, @from, @to);
+}
+
 
 // styles
 .container_12 { .clear; }
 
-body { font: normal normal 16px/1.5 sans-serif; }
+body { font: normal normal 16px/1.5 sans-serif; color: @fontColor; }
+
+h1, h2, h3, h4, h5, h6 { color: @headingColor; }
 
 h1 { .box-shadow(1px, 1px, 5px, .5); font-size: @fontSize*3; }
 h2 { font-size: @fontSize*2; border: 1px solid #ddd; display: inline-block; padding: 0 10px; .border-radius(3px); background: #fff; }
-h3 { font-size: @fontSize*1.25; }
+h3 { font-size: @fontSize*1.25; margin-bottom: 5px; }
+
+a { text-decoration: none; color: #000; border-bottom: 1px solid; }
+
+li { list-style-type: square; }
+
+pre { border-left: 5px solid @red; }
 
 .main { .clear; }
 .header { margin-bottom: 50px; margin-top: 50px; }
-.logo { font-family: 'Cabin Sketch'; font-size: 85px; }
+.intro { margin-top: 52px; }
+.logo { 
+    .logo-type { color: @headingColor; font-family: 'Cabin Sketch'; font-size: 105px; display: block; text-shadow: 1px 1px 1px #fff; }
+    .tag-line { display: block; margin: -39px 0 0 5px; letter-spacing: 1px; word-spacing: 4px; .gradient(@red, darken(@red, 4%)); padding: 0 10px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.3); }
+}
 
 section { margin-bottom: 50px; }
+
+// editing styles
+
+b, .bold { color: #333; }

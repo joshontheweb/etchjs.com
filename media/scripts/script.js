@@ -8,14 +8,19 @@
 
     var articleView = Backbone.View.extend({
         initialize: function() {
-        
+            _.bindAll(this, 'save')
+            this.model.bind('save', this.save);
         },
 
         events: {
             'mousedown .editable': 'editableClick'
         },
 
-        editableClick: etch.editableInit
+        editableClick: etch.editableInit,
+
+        save: function() {
+            $(this.el).effect('highlight', {color: 'yellow'});
+        }
         
     });
 
