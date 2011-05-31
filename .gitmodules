@@ -1,3 +1,6 @@
 [submodule "media/scripts/lib/etch"]
 	path = media/scripts/lib/etch
 	url = git@github.com:mahalo/etch.git
+[submodule "media/scripts/etch"]
+	path = media/scripts/etch
+	url = git@github.com:mahalo/etch.git
