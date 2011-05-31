@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="main">
+        <header class="header container_12">
+            <div class="logo grid_4">
+                Etch.js
+            </div>
+            <div class="intro grid_8">
+                <h3>A contentEditable editor for backbone.js</h3>
+                <ul>
+                    <li>
+                        Try the <a href="#demo">demo</a>
+                    </li>
+                    <li>
+                        Read the <a href="#docs">documentation</a>
+                    </li>
+                    <li>
+                        View the source at <a href="http://github.com/mahalo/etch">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section class="demo container_12">
+            <header class="grid_12">
+                <h2 id="demo">Demo</h2>
+            </header>
+            <article class="grid_8 suffix_4">
+                <h3 class="title editable" data-button-class="title">
+                    This is an editable title
+                </h3>
+                <div class="body editable" data-button-class="all">
+                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                </div>
+            </article>
+        </section>
+        <section id="docs" class="docs container_12">
+            <header class="grid_12">
+                <h2>Documentation</h2>
+                <div class="body">
+                    Coming Soon...  lol
+                </div>
+            </header>
+        </section>
+    </div>
+{% endblock content %}

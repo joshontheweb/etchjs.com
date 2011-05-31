@@ -19,5 +19,5 @@ urlpatterns = patterns('',
     (r'media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     
     # Guitar app
-    (r'', include('guitar.urls')),
+    (r'', include('pages.urls')),
 )

@@ -1,3 +1,23 @@
-.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) { @val: @x @y @blur rgba(0, 0, 0, @alpha); box-shadow: @val; -webkit-box-shadow: @val; -moz-box-shadow: @val; }
+// vars
+@fontSize: 16px;
+@lineHeight: 1.5;
 
-h1 { .box-shadow(1px, 1px, 5px, .5); }
+// mixins
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) { @val: @x @y @blur rgba(0, 0, 0, @alpha); box-shadow: @val; -webkit-box-shadow: @val; -moz-box-shadow: @val; }
+.border-radius (@radius) { -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius; }
+.clear { overflow: hidden; *zoom: 1; }
+
+// styles
+.container_12 { .clear; }
+
+body { font: normal normal 16px/1.5 sans-serif; }
+
+h1 { .box-shadow(1px, 1px, 5px, .5); font-size: @fontSize*3; }
+h2 { font-size: @fontSize*2; border: 1px solid #ddd; display: inline-block; padding: 0 10px; .border-radius(3px); background: #fff; }
+h3 { font-size: @fontSize*1.25; }
+
+.main { .clear; }
+.header { margin-bottom: 50px; margin-top: 50px; }
+.logo { font-family: 'Cabin Sketch'; font-size: 85px; }
+
+section { margin-bottom: 50px; }

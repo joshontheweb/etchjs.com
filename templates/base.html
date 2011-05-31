@@ -2,7 +2,12 @@
 <html>
     <head>
         {% block styles %}
+            <link rel="stylesheet" href="/media/styles/reset.css" />
+            <link rel="stylesheet" href="/media/styles/text.css" />
+            <link rel="stylesheet" href="/media/styles/960.css" />
+            <link rel="stylesheet" href="/media/scripts/etch/styles/etch.css" />
             <link rel="stylesheet/less" href="/media/styles/style.less" />
+            <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Cabin+Sketch:bold'>
         {% endblock styles %}
         {% block head-scripts %}
             <script src="/media/scripts/lib/less.min.js"></script>
@@ -10,10 +15,16 @@
     </head>
     <body>
         {% block content %}
-            
         {% endblock content %}
     
         {% block scripts %}
+            
+            <script src="/media/scripts/lib/jquery.js"></script>
+            <script src="/media/scripts/lib/less.min.js"></script>
+            <script src="/media/scripts/lib/underscore.js"></script>
+            <script src="/media/scripts/lib/backbone.js"></script>
+            <script src="/media/scripts/etch/scripts/etch.js"></script>
+            <script src="/media/scripts/script.js"></script>
         {% endblock scripts %}
     </body>
 </html>
