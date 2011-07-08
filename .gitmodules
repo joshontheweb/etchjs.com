@@ -3,4 +3,4 @@
 	url = git@github.com:mahalo/etch.git
 [submodule "media/scripts/etch"]
 	path = media/scripts/etch
-	url = git@github.com:mahalo/etch.git
+	url = git@github.com:mahalo/etch
