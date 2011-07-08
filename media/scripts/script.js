@@ -24,7 +24,7 @@
         
     });
 
-    $article = $('article');
+    $article = $('.article');
     var model = new article();
     var view = new articleView({model: model, el: $article[0], tagName: $article[0].tagName});
 })()
