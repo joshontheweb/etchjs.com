@@ -19,7 +19,6 @@
     background-image:         linear-gradient(top, @from, @to);
 }
 
-
 // styles
 .container_12 { .clear; }
 
@@ -37,6 +36,8 @@ li { list-style-type: square; }
 
 pre { border-left: 5px solid @red; }
 
+.editable { background: lighten(#3b6eae, 50%); }
+
 .main { .clear; }
 .header { margin-bottom: 50px; margin-top: 50px; }
 .intro { margin-top: 52px; }
@@ -45,7 +46,10 @@ pre { border-left: 5px solid @red; }
     .tag-line { display: block; margin: -39px 0 0 5px; letter-spacing: 1px; word-spacing: 4px; .gradient(@red, darken(@red, 4%)); padding: 0 10px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.3); }
 }
 
-section { margin-bottom: 50px; }
+.note { font: italic normal 15px/1.5 georgia; margin-bottom: 15px;  }
+.note:before { content: '*'; color: @red; font-size: 20px; }
+
+.section { margin-bottom: 50px; }
 
 // editing styles
 

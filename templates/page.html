@@ -3,7 +3,7 @@
 {% block content %}
     <div class="main">
         <a href="http://github.com/mahalo/etch"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/ce742187c818c67d98af16f96ed21c00160c234a/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
-        <header class="header container_12">
+        <div class="header container_12">
             <div class="logo grid_4">
                 <span class="logo-type">Etch.js</span>
                 <span class="tag-line">A Content Editor</span>
@@ -24,33 +24,34 @@
                     </li>
                 </ul>
             </div>
-        </header>
-        <section class="demo container_12">
-            <header class="grid_12">
+        </div>
+        <div class="section demo container_12">
+            <div class="header grid_12">
                 <h2 id="demo">Demo</h2>
-            </header>
-            <article class="grid_8">
+                <div class="note">Areas marked with a blue background are editable, try it.</div>
+            </div>
+            <div class="article grid_8">
                 <h3 class="title editable" data-button-class="title">
                     This is an editable title
                 </h3>
                 <div class="body editable" data-button-class="all">
                     But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
                 </div>
-            </article>
-            <aside class="grid_4">
-            </aside>
-        </section>
-        <section id="faq" class="faq container_12">
-            <header class="grid_12">
+            </div>
+            <div class="aside grid_4">
+            </div>
+        </div>
+        <div id="faq" class="section faq container_12">
+            <div class="header grid_12">
                 <h2>Frequently Asked Questions</h2>
                 <div class="body">
                     <p>Q: What is your favorite color?</p>
                     <p>A: Blue, no red.</p>
                 </div>
-            </header>
-        </section>
-        <section id="docs" class="docs container_12">
-            <header class="grid_12">
+            </div>
+        </div>
+        <div id="docs" class="section docs container_12">
+            <div class="header grid_12">
                 <h2>Documentation</h2>
                 <div class="body">
                     <h3>Some Documentation step</h3>
@@ -84,7 +85,7 @@
     });
                     </code></pre>
                 </div>
-            </header>
-        </section>
+            </div>
+        </div>
     </div>
 {% endblock content %}
