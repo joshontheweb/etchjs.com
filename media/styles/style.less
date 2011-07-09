@@ -8,7 +8,7 @@
 // mixins
 .box-shadow (@x: 0, @y: 0, @blur: 1px, @alpha) { @val: @x @y @blur rgba(0, 0, 0, @alpha); box-shadow: @val; -webkit-box-shadow: @val; -moz-box-shadow: @val; }
 .border-radius (@radius) { -webkit-border-radius: @radius; -moz-border-radius: @radius; border-radius: @radius; }
-.clear { overflow: hidden; *zoom: 1; }
+.clear { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 .gradient (@from, @to) {
     background-color: @from;
     background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to)); /* Saf4+, Chrome */
@@ -20,9 +20,9 @@
 }
 
 // styles
-.container_12 { .clear; }
+.container_12:after { .clear; }
 
-body { font: normal normal 16px/1.5 sans-serif; color: @fontColor; }
+body { font: normal normal 16px/1.5 sans-serif; color: @fontColor; /*background: url('http://subtlepatterns.com/patterns/handmadepaper.png');*/ }
 
 h1, h2, h3, h4, h5, h6 { color: @headingColor; }
 
@@ -38,15 +38,15 @@ pre { border-left: 5px solid @red; }
 
 .editable { background: lighten(#3b6eae, 50%); }
 
-.main { .clear; }
+.main:after { .clear; }
 .main-header { margin-bottom: 50px; margin-top: 50px; }
-.intro { margin-top: 52px; }
+.download, .intro { margin-top: 52px; }
 .logo { 
     .logo-type { color: @headingColor; font-family: 'Cabin Sketch'; font-size: 105px; display: block; text-shadow: 1px 1px 1px #fff; }
     .tag-line { display: block; margin: -39px 0 0 5px; letter-spacing: 1px; word-spacing: 4px; .gradient(@red, darken(@red, 4%)); padding: 0 10px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.3); }
 }
 
-.note { font: italic normal 15px/1.5 georgia; margin-bottom: 15px;  }
+.note { font: italic bold 15px/1.5 georgia; margin-bottom: 15px; }
 .note:before { content: '*'; color: @red; font-size: 20px; }
 
 .section { margin-bottom: 50px; }
