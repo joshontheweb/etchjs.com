@@ -43,7 +43,7 @@ pre { border-left: 5px solid @red; }
 .download, .intro { margin-top: 52px; }
 .logo { 
     .logo-type { color: @headingColor; font-family: 'Cabin Sketch'; font-size: 105px; display: block; text-shadow: 1px 1px 1px #fff; }
-    .tag-line { display: block; margin: -39px 0 0 5px; letter-spacing: 1px; word-spacing: 4px; .gradient(@red, darken(@red, 4%)); padding: 0 10px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.3); }
+    .tag-line { border: 1px solid darken(@red, 20%); display: block; margin: -39px 0 0 5px; letter-spacing: 1px; word-spacing: 4px; .gradient(@red, darken(@red, 4%)); padding: 0 10px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,.3); }
 }
 
 .note { font: italic bold 15px/1.5 georgia; margin-bottom: 15px; }
@@ -54,3 +54,15 @@ pre { border-left: 5px solid @red; }
 // editing styles
 
 b, .bold { color: #333; }
+
+.download-link { background: @red url('images/download.png') no-repeat top left; padding: 15px 15px 15px 53px; .border-radius(5px); .gradient(lighten(@red, 10%), darken(@red, 10%); position: relative;
+    color: #fff; font-size: 20px; text-shadow: 0 0 2px rgba(0,0,0,.5);
+    a { border: none; }
+    border: 1px solid darken(@red, 20%);
+    .download-icon { background: url('images/download.png') no-repeat top left; position: absolute; top: 11px; left: 15px; width: 50px; height: 50px; display: block; }
+}
+
+.download-link:hover { .gradient(lighten(@red, 7%), darken(@red, 7%); }
+.download-link:active { .gradient(darken(@red, 5%), lighten(@red, 5%); position: relative; top: 1px; }
+
+.main-footer li { list-style-type: none; margin-left: 0; }
