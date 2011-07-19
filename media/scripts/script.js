@@ -19,7 +19,12 @@
         editableClick: etch.editableInit,
 
         save: function() {
-            $(this.el).effect('highlight', {color: 'yellow'});
+
+            // normally you would call model.save() here but this is a demo
+            $(this.el).find('.editable').effect('highlight', {color: 'yellow'});
+            $('.save-event').fadeIn('fast', function() {
+                setTimeout($(this).fadeOut('slow'), 10000);
+            });
         }
         
     });
