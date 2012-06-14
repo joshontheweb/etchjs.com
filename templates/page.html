@@ -99,18 +99,18 @@
                 <p>
                     At this point your scripts section should look something like this:
                         <pre><code>
-    &lt;script src=&quot;/media/scripts/lib/jquery.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/media/scripts/lib/underscore.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/media/scripts/lib/backbone.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/media/scripts/lib/rangy-core.js&quot;&gt;&lt;/script&gt; &lt;!-- OPTIONAL --&gt;
-    &lt;script src=&quot;/media/scripts/etch/scripts/etch.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;/media/scripts/article.js&quot;&gt;&lt;/script&gt; &lt;!-- Models/Views here --&gt;
+  &lt;script src=&quot;/media/scripts/lib/jquery.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/media/scripts/lib/underscore.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/media/scripts/lib/backbone.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/media/scripts/lib/rangy-core.js&quot;&gt;&lt;/script&gt; &lt;!-- OPTIONAL --&gt;
+  &lt;script src=&quot;/media/scripts/etch/scripts/etch.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;/media/scripts/article.js&quot;&gt;&lt;/script&gt; &lt;!-- Models/Views here --&gt;
                         </code></pre>
                 </p>
                 <p class="note">Ensure that your scripts are in the right order or everything will likely be broken.</p>
                 <p>Also you need to add etch.css to your stylesheets</p>
                         <pre><code>
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;/media/scripts/etch/styles/etch.css&quot; /&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/media/scripts/etch/styles/etch.css&quot; /&gt;
                         </code></pre>
                 
 
@@ -120,14 +120,14 @@
                     this is all it takes to get Etch working.
                 </p>
                 <pre><code>
-    var article = Backbone.Model.extend({
-        url: '/some/api/url/',
+  var article = Backbone.Model.extend({
+    url: '/some/api/url/',
 
-        defaults: {
-            title: 'Default Title',
-            body: 'Default body text'
-        }
-    });
+    defaults: {
+      title: 'Default Title',
+      body: 'Default body text'
+    }
+  });
                 </code></pre>
                 <h3>Building the View</h3>
                 <p>
@@ -136,13 +136,13 @@
                     <code>etch.editableInit</code>.
                 </p>
                 <pre><code>
-    var articleView = Backbone.View.extend({
-        events: {
-            'mousedown .editable': 'editableClick'
-        },
+  var articleView = Backbone.View.extend({
+    events: {
+      'mousedown .editable': 'editableClick'
+    },
 
-        editableClick: etch.editableInit
-    });
+    editableClick: etch.editableInit
+  });
                 </code></pre>
                 <p>
                     <code>etch.editableInit</code> handles everything else for you except for saving.
@@ -150,18 +150,18 @@
                     adding a binding to the view like so:
                 </p>
                 <pre><code>
-    var articleView = Backbone.View.extend({
-        initialize: function() {
-            _.bindAll(this, 'save');
-            this.model.bind('save', this.model.save);
-        },
+  var articleView = Backbone.View.extend({
+    initialize: function() {
+      _.bindAll(this, 'save');
+      this.model.bind('save', this.model.save);
+    },
         
-        events: {
-            'mousedown .editable': 'editableClick'
-        },
+    events: {
+      'mousedown .editable': 'editableClick'
+    },
 
-        editableClick: etch.editableInit
-    });
+    editableClick: etch.editableInit
+  });
                 </code></pre>
 
                 <h3>Customizing</h3>
@@ -173,11 +173,11 @@
                     The default classes are:
                 </p>
                     <pre><code>
-    etch.buttonClasses = {
-        'default': ['save'],
-        'all': ['bold', 'italic', 'underline', 'unordered-list', 'ordered-list', 'link', 'save'],
-        'title': ['bold', 'italic', 'underline', 'save']
-    };
+  etch.buttonClasses = {
+    'default': ['save'],
+    'all': ['bold', 'italic', 'underline', 'unordered-list', 'ordered-list', 'link', 'clear-formatting', 'save'],
+    'title': ['bold', 'italic', 'underline', 'save']
+  };
                     </code></pre>
                 <p class="note">The 'default' button class will be used if no button class is defined on the element.</p>
                 <p>
@@ -185,15 +185,15 @@
                     add more buttons and add a 'caption' class.
                 </p>
                 <pre><code>
-    _.extend(etch.buttonClasses, {
-        'default': ['bold', 'italic', 'underline', 'save'],
-        'caption': ['bold', 'italic', 'underline', 'link', 'save']
-    });
+  _.extend(etch.buttonClasses, {
+    'default': ['bold', 'italic', 'underline', 'save'],
+    'caption': ['bold', 'italic', 'underline', 'link', 'save']
+  });
                 </code></pre>
                 <p class="note">The order of buttons in the array is how they will be presented in the editor widget.</p>
                 <p>If the class '.editable' causes conflicts for you or you need to change it for any reason you can do so by setting <code>etch.selector</code></p>
                 <pre><code>
-    etch.selector = '.my-new-editable-class';
+  etch.selector = '.my-new-editable-class';
                 </pre></code>
                 <h3>Issues and Questions</h3>
                 Contact Josh Nielsen through <a href="https://github.com/joshontheweb/etch/issues">github issues</a>
