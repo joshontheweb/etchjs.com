@@ -195,6 +195,16 @@
                 <pre><code>
   etch.config.selector = '.my-new-editable-class';
                 </pre></code>
+
+                <p>All functions are public and can be overridden to customize functionality</p>
+                <p>For instance, if you want to create a custom popup for the url prompt:</p>
+                <pre><code>
+  etch.views.Editor.prototype.urlPrompt = function(callback) {
+    // Custom popup code to get url
+    callback(url)
+  }
+                </code></pre>
+                
                 <h3>Issues and Questions</h3>
                 Contact Josh Nielsen through <a href="https://github.com/joshontheweb/etch/issues">github issues</a>
             </div>
