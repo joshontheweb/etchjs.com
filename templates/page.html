@@ -26,7 +26,7 @@
             </div>
             <div class="download grid_4">
                 <p>
-                <a class="download-link" href="https://github.com/joshontheweb/etch/tarball/0.5.0">Download v0.5.0<span class="download-icon"></span></a>
+                <a class="download-link" href="https://github.com/joshontheweb/etch/tarball/0.6.0">Download v0.6.0<span class="download-icon"></span></a>
                 </p>
                 <p>~20k</p>
             </div>
@@ -173,7 +173,7 @@
                     The default classes are:
                 </p>
                     <pre><code>
-  etch.buttonClasses = {
+  etch.config.buttonClasses = {
     'default': ['save'],
     'all': ['bold', 'italic', 'underline', 'unordered-list', 'ordered-list', 'link', 'clear-formatting', 'save'],
     'title': ['bold', 'italic', 'underline', 'save']
@@ -181,19 +181,19 @@
                     </code></pre>
                 <p class="note">The 'default' button class will be used if no button class is defined on the element.</p>
                 <p>
-                    Defining your own button classes can be accomplished by extending <code>etch.buttonClasses</code>.  Here we override 'default' to 
+                    Defining your own button classes can be accomplished by extending <code>etch.config.buttonClasses</code>.  Here we override 'default' to 
                     add more buttons and add a 'caption' class.
                 </p>
                 <pre><code>
-  _.extend(etch.buttonClasses, {
+  _.extend(etch.config.buttonClasses, {
     'default': ['bold', 'italic', 'underline', 'save'],
     'caption': ['bold', 'italic', 'underline', 'link', 'save']
   });
                 </code></pre>
                 <p class="note">The order of buttons in the array is how they will be presented in the editor widget.</p>
-                <p>If the class '.editable' causes conflicts for you or you need to change it for any reason you can do so by setting <code>etch.selector</code></p>
+                <p>If the class '.editable' causes conflicts for you or you need to change it for any reason you can do so by setting <code>etch.config.selector</code></p>
                 <pre><code>
-  etch.selector = '.my-new-editable-class';
+  etch.config.selector = '.my-new-editable-class';
                 </pre></code>
                 <h3>Issues and Questions</h3>
                 Contact Josh Nielsen through <a href="https://github.com/joshontheweb/etch/issues">github issues</a>
